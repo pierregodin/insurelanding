@@ -1,0 +1,106 @@
+
+// Colors
+$clr_primary_violet: hsl(256, 26%, 20%);
+$clr_primary_blue: hsl(216, 30%, 68%);
+
+$clr_dark_violet: hsl(270, 9%, 17%);
+$clr_gray_violet: hsl(273, 4%, 51%);
+$clr_white: hsl(0, 0%, 98%);
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');     
+
+$font-titles: "DM Serif Display", serif;
+$font-body: "Karla", sans-serif;
+
+// Values
+
+$border-padding: 1.875rem;
+
+html, body {
+    margin: 0 auto;
+    background-color: $clr_white;
+}
+
+* {
+    font-family: $font-body;  
+    font-size: 1rem;
+    font-weight: 400;
+
+    box-sizing: border-box;
+
+    &::after, &::before {
+        box-sizing: border-box;
+    }
+    
+}
+
+h1, h2, h3, h4 {
+    font-family: $font-titles;
+    margin: 0;
+}
+
+// C'est parti
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $border-padding;
+}
+
+header > nav > ul {
+    display: none;
+}
+
+#intro_bloc {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+#image_intro_bloc > img {
+    width: 100vw;
+    display: flex;
+}
+
+#text_intro_bloc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: $clr_white;
+    background-color: $clr_primary_violet;
+    padding: 5rem $border-padding 5rem $border-padding;
+
+    h1 {
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+}
+
+.primary_button {
+    display: flex;
+    background: none;
+    border: 1.5px solid $clr_white;
+    color: $clr_white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: .6rem $border-padding;
+    text-decoration: none;
+    font-size: smaller;
+    margin: 1rem 0;
+}
+
+p {
+    line-height: 1.7rem;
+    letter-spacing: 0.1px;
+}
+
+// Desktop view
+@media only screen and (min-width: 768px) {
+    body {
+        color: red;
+    }
+}
