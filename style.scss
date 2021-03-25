@@ -5,6 +5,7 @@ $clr_primary_blue: hsl(216, 30%, 68%);
 
 $clr_dark_violet: hsl(270, 9%, 17%);
 $clr_gray_violet: hsl(273, 4%, 51%);
+$clr_light_violet: hsl(270, 17%, 80%);
 $clr_white: hsl(0, 0%, 98%);
 
 // Typography
@@ -19,7 +20,7 @@ $border-padding: 1.875rem;
 
 html, body {
     margin: 0 auto;
-    background-color: $clr_white;
+    background-color: hsl(0, 0%, 100%);
 }
 
 * {
@@ -38,6 +39,45 @@ html, body {
 h1, h2, h3, h4 {
     font-family: $font-titles;
     margin: 0;
+}
+
+h1 {
+    font-size: 2.8125rem;
+    line-height: 3rem;
+}
+
+h2 {
+    font-size: 2.1875rem;
+    line-height: 2.45rem;
+}
+
+h3 {
+    font-size: 1.5625rem;
+    line-height: 2rem;
+}
+
+.on-top {
+    z-index: 100;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
 }
 
 // C'est parti
@@ -65,6 +105,7 @@ header > nav > ul {
 }
 
 #text_intro_bloc {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,12 +113,85 @@ header > nav > ul {
     flex-direction: column;
     color: $clr_white;
     background-color: $clr_primary_violet;
-    padding: 5rem $border-padding 5rem $border-padding;
+    padding: 5.625rem $border-padding 5.625rem $border-padding;
 
-    h1 {
-        font-size: 2.8rem;
-        line-height: 3rem;
+    object {
+        position: absolute;
     }
+
+    object.bottom-right {
+        bottom: -11rem;
+    }
+}
+
+#were_different_bloc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: $clr_dark_violet;
+    background-color: $clr_white;  
+    padding: 5.625rem $border-padding 5.625rem $border-padding;
+    
+    span#separation {
+        margin: 2.25rem;
+
+        hr {
+            width: 10em;
+            border: 1px solid $clr_light_violet;
+        }
+    }
+
+    #quotesBy3 {
+        padding: 2rem 0;   
+    }
+
+    .quotes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 0 0;
+
+        object {
+            margin: 1.5625rem;
+        }
+
+        p {
+            color: $clr_gray_violet;
+        }
+    }
+}
+
+#find_out_bloc {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: $clr_white;
+    background-color: $clr_primary_violet;  
+    margin: 0 $border-padding; 
+    margin-bottom: 8.125rem;
+    padding: 3.75rem 1rem;
+
+    object {
+        position: absolute;
+    }
+
+    h2 {
+        margin: 1rem;
+    }
+
+    button {
+        margin: 1rem;
+    }
+}
+
+footer {
+    background-color: $clr_white;
 }
 
 .primary_button {
@@ -89,13 +203,12 @@ header > nav > ul {
     letter-spacing: 2px;
     padding: .6rem $border-padding;
     text-decoration: none;
-    font-size: smaller;
-    margin: 1rem 0;
+    font-size: smaller;    
 }
 
 p {
-    line-height: 1.7rem;
-    letter-spacing: 0.1px;
+    line-height: 1.5625rem;
+    letter-spacing: -.2px;
 }
 
 // Desktop view

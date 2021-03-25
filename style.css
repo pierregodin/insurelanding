@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
 html, body {
   margin: 0 auto;
-  background-color: #fafafa;
+  background-color: white;
 }
 
 * {
@@ -20,6 +20,45 @@ html, body {
 h1, h2, h3, h4 {
   font-family: "DM Serif Display", serif;
   margin: 0;
+}
+
+h1 {
+  font-size: 2.8125rem;
+  line-height: 3rem;
+}
+
+h2 {
+  font-size: 2.1875rem;
+  line-height: 2.45rem;
+}
+
+h3 {
+  font-size: 1.5625rem;
+  line-height: 2rem;
+}
+
+.on-top {
+  z-index: 100;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
 }
 
 header {
@@ -60,6 +99,7 @@ header > nav > ul {
 }
 
 #text_intro_bloc {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,12 +116,112 @@ header > nav > ul {
           flex-direction: column;
   color: #fafafa;
   background-color: #2d2640;
-  padding: 5rem 1.875rem 5rem 1.875rem;
+  padding: 5.625rem 1.875rem 5.625rem 1.875rem;
 }
 
-#text_intro_bloc h1 {
-  font-size: 2.8rem;
-  line-height: 3rem;
+#text_intro_bloc object {
+  position: absolute;
+}
+
+#text_intro_bloc object.bottom-right {
+  bottom: -11rem;
+}
+
+#were_different_bloc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #2b272f;
+  background-color: #fafafa;
+  padding: 5.625rem 1.875rem 5.625rem 1.875rem;
+}
+
+#were_different_bloc span#separation {
+  margin: 2.25rem;
+}
+
+#were_different_bloc span#separation hr {
+  width: 10em;
+  border: 1px solid #ccc3d5;
+}
+
+#were_different_bloc #quotesBy3 {
+  padding: 2rem 0;
+}
+
+#were_different_bloc .quotes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem 0 0 0;
+}
+
+#were_different_bloc .quotes object {
+  margin: 1.5625rem;
+}
+
+#were_different_bloc .quotes p {
+  color: #837d87;
+}
+
+#find_out_bloc {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fafafa;
+  background-color: #2d2640;
+  margin: 0 1.875rem;
+  margin-bottom: 8.125rem;
+  padding: 3.75rem 1rem;
+}
+
+#find_out_bloc object {
+  position: absolute;
+}
+
+#find_out_bloc h2 {
+  margin: 1rem;
+}
+
+#find_out_bloc button {
+  margin: 1rem;
+}
+
+footer {
+  background-color: #fafafa;
 }
 
 .primary_button {
@@ -96,12 +236,11 @@ header > nav > ul {
   padding: 0.6rem 1.875rem;
   text-decoration: none;
   font-size: smaller;
-  margin: 1rem 0;
 }
 
 p {
-  line-height: 1.7rem;
-  letter-spacing: 0.1px;
+  line-height: 1.5625rem;
+  letter-spacing: -.2px;
 }
 
 @media only screen and (min-width: 768px) {
